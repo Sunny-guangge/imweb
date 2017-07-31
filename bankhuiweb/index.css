@@ -1,0 +1,107 @@
+.topbar{
+    background: black;
+    height: 50pt;
+}
+
+.naviname{
+    height: 50pt;
+    width: 400pt;
+}
+
+.productname{
+    margin-left: 40pt;
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+    height: 50pt;
+    display: block;
+    padding-top: 7pt;
+}
+
+.left{
+    width: 25%;
+    float: left;
+    height: auto;
+    -webkit-border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: gray;
+}
+
+.leftview{
+    display: inline;
+    float: inherit;
+    height: auto;
+}
+
+.lefttitle{
+    margin: 5pt;
+    font-size: 14pt;
+    color: #232322;
+    float: inherit;
+    height: 30px;
+}
+
+.department{
+    margin-top: 10px;
+    font-size: 8px;
+    display: block;
+}
+
+.departmentlist{
+    float: left;
+    width: auto;
+    height: auto;
+}
+
+.adddepartment{
+    float: right;
+    width: 100px;
+    height: 25px;
+}
+/**/
+.adduserbuttonopen{
+    float: right;
+    width: 100px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.right{
+    width: 70%;
+    float: right;
+    height: auto;
+    -webkit-border-radius: 15pt;
+    background: gray;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.usertable{
+    margin: 10px;
+}
+
+.departmentform{
+    margin: 10px;
+}
+
+.departmentname{
+    width: 150px;
+}
+
+.departmentintroduce{
+    height: 100px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.submitnewdepartment{
+    width: 100px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.adduser{
+    margin: 10px;
+}
+

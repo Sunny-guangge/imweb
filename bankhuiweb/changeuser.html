@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改信息</title>
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topbar">
+    <div class="naviname">
+        <span class="productname">百汇work后台管理系统</span>
+    </div>
+</div>
+<div class="left">
+    <div class="lefttitle">
+        <span class="departmentlist">部门列表</span>
+        <button class="adddepartment">添加部门</button>
+        <button class="adduserbuttonopen">添加人员</button>
+        <ul class="department">
+
+        </ul>
+    </div>
+</div>
+
+<div class="right">
+    <div class="changeuser">
+        <p class="changeuserphone"></p>
+        <form class="changeuserform">
+            姓  名：<input class="changeusername" name="changeusername"><br>
+            性  别：<select class="changeusersex">
+            <option value="请选择">请选择</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select><br>
+            邮  箱：<input class="changeuseremail" name="changeuseremail"><br>
+            部  门：<select class="changeuserdepartment">
+            <option value="请选择">请选择</option>
+        </select><br>
+            <button class="changeuserbutton">确认修改</button>
+        </form>
+    </div>
+</div>
+
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
+<script src="Utils.js" type="text/javascript"></script>
+<script src="user.js" type="text/javascript"></script>
+<script src="changeuser.js" type="text/javascript"></script>
+</body>
+</html>

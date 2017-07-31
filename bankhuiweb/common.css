@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Microsoft Yahei",Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 100%;
+    background: white;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 14px;
+    padding: 10px;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,ol,form,table,div,p,imag{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+div{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    margin: 10px;
+}
+
+th{
+    width: 60px;
+}
+
+a:link ,a:visited{
+    text-decoration: none;
+    color: #232322;
+}
