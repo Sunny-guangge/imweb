@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IM客户端后台管理系统</title>
+    <title>编辑部门信息</title>
     <link href="common.css" rel="stylesheet" type="text/css">
     <link href="index.css" rel="stylesheet" type="text/css">
 </head>
@@ -16,11 +16,12 @@
 <div class="right">
     <div class="adddepartmentlist">
         <form class="departmentform">
-            部门名称：<input class="departmentname" type="text" name="departmentname" id="departmentname" placeholder="请输入部门名称">
+            部门名称：<p class="editdepartmentname"></p>
+            部门介绍：<textarea class="editdepartmentintroduce" name="editdepartmentintroduce" placeholder="请输入部门介绍" id="editdepartmentintroduce"></textarea>
             <br>
-            部门介绍：<textarea class="departmentintroduce" name="departmentintroduce" placeholder="请输入部门介绍" id="departmentintroduce"></textarea>
+            优先级：<input class="editdepartmentpriority" name="editdepartmentpriority">
             <br>
-            <button class="submitnewdepartment">提交</button>
+            <button class="editnewdepartment">确认修改</button>
         </form>
     </div>
 </div>
@@ -28,5 +29,6 @@
 <script src="Utils.js" type="text/javascript"></script>
 <script src="department.js" type="text/javascript"></script>
 <script src="index.js" type="text/javascript"></script>
+<script src="editdepartment.js" type="text/javascript"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 }
 
 .left{
-    width: 25%;
+    width: 30%;
     float: left;
     height: auto;
     -webkit-border-radius: 15px;
@@ -28,30 +28,22 @@
     background: gray;
 }
 
-.leftview{
-    display: inline;
-    float: inherit;
-    height: auto;
-}
-
-.lefttitle{
+.leftbackview{
     margin: 5pt;
     font-size: 14pt;
     color: #232322;
-    float: inherit;
     height: 30px;
 }
 
 .department{
-    margin-top: 10px;
-    font-size: 8px;
-    display: block;
+    font-size: 12px;
+    margin: 10px;
 }
 
 .departmentlist{
     float: left;
     width: auto;
-    height: auto;
+    height: 30px;
 }
 
 .adddepartment{
@@ -68,7 +60,7 @@
 }
 
 .right{
-    width: 70%;
+    width: 65%;
     float: right;
     height: auto;
     -webkit-border-radius: 15pt;
