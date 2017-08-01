@@ -6,8 +6,6 @@ $(function () {
     var  getval =thisURL.split('?')[1];
     var userid= getval.split("=")[1];
 
-    var basicurl = "http://172.16.0.52:10002";
-
     var m = {
         init:function () {
             m.load();
@@ -29,7 +27,7 @@ $(function () {
             var department = $(".changeuserdepartment").val();
             var opts = {
                 type:"get",
-                url:basicurl + "/work/im/changeuserbasicmessage",
+                url:Utils.validate.baseurl() + "changeuserbasicmessage",
                 dataType:"json",
                 data:{
                     name:name,
@@ -40,7 +38,7 @@ $(function () {
                 },
                 success:function (data) {
                     if (data.code == 10000){
-                        window.location.href = "index.html";
+                        window.location.href = "../html/index.html";
                     }
                 }
             }
@@ -50,7 +48,7 @@ $(function () {
         load:function () {
             var userbasic = {
                 type:"post",
-                url:basicurl + "/work/im/checkuserbyid",
+                url:Utils.validate.baseurl() + "checkuserbyid",
                 data:{
                     id:userid
                 },
@@ -68,7 +66,7 @@ $(function () {
 
             var department = {
                 type: "post",
-                url: basicurl + "/work/im/allDepartmentlist",
+                url: Utils.validate.baseurl() + "allDepartmentlist",
                 data: "",
                 success: function (data) {
                     if (data.code == 10000) {

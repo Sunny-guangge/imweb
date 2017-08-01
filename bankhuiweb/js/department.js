@@ -2,9 +2,6 @@
  * Created by sunny on 2017/7/27.
  */
 $(function () {
-
-    var baseurl = "http://172.16.0.52:10002";
-
     var m = {
         init:function () {
             m.bidding();
@@ -25,7 +22,7 @@ $(function () {
             var introduce = $("input[name=departmentintroduce]").val();
 
             var opts = {
-                url : baseurl + "/work/im/savedepartment",
+                url : Utils.validate.baseurl() + "savedepartment",
                 type:"post",
                 data:{
                     name:name,

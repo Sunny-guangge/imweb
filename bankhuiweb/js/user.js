@@ -2,7 +2,6 @@
  * Created by sunny on 2017/7/27.
  */
 $(function () {
-    var baseurl = "http://172.16.0.52:10002";
     var m = {
         init:function () {
             m.binding();
@@ -24,7 +23,7 @@ $(function () {
         load:function () {
             var department = {
                 type: "post",
-                url: baseurl + "/work/im/allDepartmentlist",
+                url: Utils.validate.baseurl() + "allDepartmentlist",
                 data: "",
                 success: function (data) {
                     if (data.code == 10000) {
@@ -47,7 +46,7 @@ $(function () {
             var department = $(".adduserdepartment").val();
             var opts = {
                 type:"get",
-                url:baseurl + "/work/im/register",
+                url:Utils.validate.baseurl() + "register",
                 dataType:"json",
                 data:{
                     name:name,
@@ -58,7 +57,7 @@ $(function () {
                 },
                 success:function (data) {
                     if (data.code == 10000){
-                        window.location.href = "index.html";
+                        window.location.href = "../html/index.html";
                     }
                 }
             }

@@ -3,19 +3,17 @@
  */
 $(function () {
 
-    var baseurl = "http://172.16.0.52:10002";
-
     var m = {
 
         binding:function () {
             $(".adduserbuttonopen").on("click",function () {
-                window.location.href="adduser.html";
+                window.location.href = "../html/adduser.html";
             })
             $(".adddepartment").on("click",function () {
-                window.location.href="adddepartment.html";
+                window.location.href="../html/adddepartment.html";
             })
             $(".productname").on("click",function () {
-                window.location.href="index.html";
+                window.location.href="../html/index.html";
             })
         },
 
@@ -23,7 +21,7 @@ $(function () {
             //所有部门列表
             var department = {
                 type: "post",
-                url: baseurl + "/work/im/allDepartmentlist",
+                url: Utils.validate.baseurl() + "allDepartmentlist",
                 data: "",
                 success: function (data) {
                     if (data.code == 10000) {
@@ -45,7 +43,7 @@ $(function () {
                                     var departmentid = $(this).attr("department_id");
                                     var deletedepartmetn = {
                                         type:"post",
-                                        url:baseurl + "/work/im/deletedepartment",
+                                        url:Utils.validate.baseurl() + "deletedepartment",
                                         data:{
                                             id:departmentid
                                         },
@@ -66,7 +64,7 @@ $(function () {
                                 var departmentid = $(this).attr("department_id");
                                 var departmentuserlist = {
                                     type:"post",
-                                    url:baseurl + "/work/im/departmentuserlist",
+                                    url:Utils.validate.baseurl() + "departmentuserlist",
                                     data:{
                                         departmentid:departmentid
                                     },
@@ -82,7 +80,7 @@ $(function () {
                             //进入编辑部门信息界面
                             $(".editdepartmentuser").on("click",function () {
                                 var departmentid = $(this).attr("department_id");
-                                window.location.href = "editdepartment.html?departmentid=" + departmentid;
+                                window.location.href = "../html/editdepartment.html?departmentid=" + departmentid;
                             })
                         }
                     }
@@ -91,7 +89,7 @@ $(function () {
             //显示所有用户的操作
             var userlist = {
                 type: "post",
-                url: baseurl + "/work/im/findalluser",
+                url: Utils.validate.baseurl() + "findalluser",
                 data: "",
                 success: function (data) {
                     if (data.code == 10000) {
@@ -140,7 +138,7 @@ $(function () {
                         var phonenum = $(this).attr("data_id");
                         var deleteuser = {
                             type:"post",
-                            url:baseurl + "/work/im/deleteoneuser",
+                            url:Utils.validate.baseurl() + "deleteoneuser",
                             data:{
                                 phone:phonenum
                             },
@@ -159,7 +157,7 @@ $(function () {
                 }),
                     $(".changeuserclass").on("click",function () {
                         var userid = $(this).attr("user_id");
-                        window.location.href = "changeuser.html?userid=" + userid;
+                        window.location.href = "../html/changeuser.html?userid=" + userid;
                     })
             }
         }

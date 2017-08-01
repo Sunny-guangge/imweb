@@ -6,8 +6,6 @@ $(function () {
     var  getval =thisURL.split('?')[1];
     var departmentid= getval.split("=")[1];
 
-    var basicurl = "http://172.16.0.52:10002";
-
     var m = {
         init:function () {
             m.load();
@@ -21,7 +19,7 @@ $(function () {
             var priority = $("input[name=editdepartmentpriority]").val();
             var opts = {
                 type:"get",
-                url:basicurl + "/work/im/editdepartment",
+                url:Utils.validate.baseurl() + "editdepartment",
                 dataType:"json",
                 data:{
                     id:departmentid,
@@ -30,7 +28,7 @@ $(function () {
                 },
                 success:function (data) {
                     if (data.code == 10000){
-                        window.location.href = "index.html";
+                        window.location.href = "../html/index.html";
                     }
                 }
             }
@@ -40,7 +38,7 @@ $(function () {
         load:function () {
             var departmentbasic = {
                 type:"post",
-                url:basicurl + "/work/im/checkdepartment",
+                url:Utils.validate.baseurl() + "checkdepartment",
                 data:{
                     id:departmentid
                 },
